@@ -1,0 +1,25 @@
+-----------------------------
+PERSON AGE
+
+Declare integer age
+Input age
+if (age ≤ 0) then Display "wrong age" 
+   else if (age <8)   the Display  "Child"
+   else if (age >=8)  and (age <18)  then Display "Boy" 
+   else if (age >=18) and (age <35)  then Display "Young"
+   else if (age >=35) and (age <65)  then Display "Old"
+      else (age >65)  then Display "Very old"
+    End if
+
+-------------------------------
+SIDES OF TRIANGLE
+
+Declare integer a,b,c
+Input a,b,c
+if (a==b) or (b==c) or (a==c)
+     then if (a==b) and (b==c) and (a==c) then Display "Equalatrial" 
+     else Display "isoseles" End-if
+else Display Scalene" End-if
+if (a*a == b*b + c*c) or (b*b == c*c + a*a) or (c*c = b*b + a*a)
+      then Display "Right-angled"
+       End-if
