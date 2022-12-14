@@ -20,32 +20,23 @@ string invert (string text)
 
 }
 
-string replace (string pattern, string text, int start, int end)
+string replace(string pattern, string text, int start, int end)
 {
-	string temp = "";
-	int dif = pattern.length() - (end - start);
-	for (int i = (text.length()-dif); i < text.length(); i++)
-	{
-		temp += text[i];
-	}
+    string toReturn = "";
+   for(int i = 0; i < start; i++)
+   {
+       toReturn += text[i];
+   }
+   for(int i = 0; i < pattern.length(); i++)
+   {
+        toReturn += pattern[i];
+   }
+   for(int i = end; i < text.length(); i++)
+   {
+        toReturn += text[i];
+   }
 
-	for (int i = text.length(); i > end-1; i--)
-	{
-		if (dif < 0)
-		{
-			text[i-dif] = text[i];
-		}
-		else if (dif > 0)
-		{
-			text[i+dif] = text[i];
-		}
-	}
-
-	for (int i = start,j=0; i < end+dif; i++,j++)
-	{
-		text[i] = pattern[j];
-	}
-	return text + temp;
+    return toReturn;
 }
 
 int find(string pattern, string text)

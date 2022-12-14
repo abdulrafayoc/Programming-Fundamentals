@@ -73,7 +73,7 @@ void runMouse(int maze[9][16])
 		int mx, my;        
 		findMouse(mx,my,maze);
 		show(maze);
-		sleep(.8);
+		sleep(.9);
 		srand(time(0));
 		int rdm = rand() % 4;
 		
